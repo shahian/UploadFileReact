@@ -12,18 +12,6 @@ import LifeInsurance from "./pages/LifeInsurance/LifeInsurance";
 
 function App() {
   return (
-    // for control with state
-    // <div className="App">
-    //   <ToastContainer style={{ fontSize: "18px" }} />
-    //   <Router>
-    //     <Switch>
-    //       <Route exact path="/login" component={Login} />
-    //       <Route exact path="/forgot-password" component={ForgotPassword} />
-    //       <PrivateRoute exact path="/" component={MainLayout} />
-    //       <PrivateRoute component={NotFound404} />
-    //     </Switch>
-    //   </Router>
-    // </div>
     <Router>
       <div className="App">
         <ToastContainer
