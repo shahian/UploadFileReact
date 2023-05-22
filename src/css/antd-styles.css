@@ -1,0 +1,115 @@
+.ant-btn {
+  border-radius: 5px;
+  height: 40px;
+}
+
+.ant-table-pagination.ant-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  direction: ltr;
+}
+
+.ant-menu-title-content {
+  text-align: right;
+  direction: rtl;
+}
+
+.ant-table-container table > thead > tr:first-child th {
+  text-align: center;
+}
+
+.ant-table-tbody > tr.ant-table-row > td {
+  text-align: center;
+}
+
+.ant-popover-inner-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 60px;
+}
+
+.ant-popover-message {
+  display: none;
+}
+
+.ant-popover-buttons button {
+  margin: 0;
+  width: 60px;
+  height: 30px;
+}
+
+.ant-popover-buttons {
+  display: flex;
+  width: 140px;
+  justify-content: space-around;
+}
+
+.ant-modal-content {
+  font-family: IRANSansWeb;
+  overflow: auto;
+  border-radius: 10px;
+  min-width: 600px;
+}
+
+.ant-popconfirm {
+  font-family: IRANSansWeb;
+}
+
+.ant-btn-primary {
+  background-color: #3fcaec;
+  border: none;
+  height: 40px;
+}
+
+.ant-spin-dot-item {
+  background-color: #3fcaec;
+}
+
+.ant-btn:focus {
+  border-color: rgb(226, 226, 226);
+  color: rgb(0, 0, 0);
+}
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  height: 46px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  font-family: IRANSansWeb !important;
+}
+
+.ant-select-arrow {
+  color: #3fcaec;
+  right: 90%;
+}
+
+.ant-pagination.mini .ant-pagination-options-size-changer .ant-select-arrow {
+  color: #3fcaec;
+  right: 85%;
+}
+
+.ant-select-single.ant-select-show-arrow .ant-select-selection-item,
+.ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder {
+  padding-right: 0px;
+}
+
+.ant-select-single.ant-select-sm:not(.ant-select-customize-input).ant-select-show-arrow
+  .ant-select-selection-item,
+.ant-select-single.ant-select-sm:not(.ant-select-customize-input).ant-select-show-arrow
+  .ant-select-selection-placeholder {
+  padding-right: 5px;
+  padding-left: 10px;
+}
+
+.ant-pagination-item-active {
+  border-color: #3FCAEC;
+  border-radius: 5px;
+}
+
+.ant-pagination-item-active a {
+  color:#3FCAEC
+}
