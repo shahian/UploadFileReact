@@ -21,7 +21,7 @@ function App() {
           limit={3}
         />
         <Switch>
-          <Route exact path="/LifeInsurance" component={LifeInsurance} />
+          <Route exact path="/" component={LifeInsurance} />
           <Route exact path="/login" component={Login} />
           {/* <MainLayout> */}
             <Switch>

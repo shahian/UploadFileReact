@@ -1,18 +1,18 @@
-        import { Link, useHistory } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
-import { getFromLocalStorage } from '../../helpers/ManageLocalStorage';
-import { useEffect, useState } from 'react';
-import { uploadExcelFile } from '../../redux/features/LifeInsurance/uploadExcelFile';
-import { Button, Upload, Menu ,Col, Divider, Row} from 'antd';
-import { UploadOutlined } from '@ant-design/icons';
-import 'antd/dist/antd.css';
+import { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { getFromLocalStorage } from "../../helpers/ManageLocalStorage";
 import "./styles.css";
+
+import { useEffect } from "react";
+import { uploadExcelFile } from "../../redux/features/LifeInsurance/uploadExcelFile";
+
 const LifeInsurance = () => {
   const select = useSelector;
   const dispatch = useDispatch();
   let history = useHistory();
-  const token = getFromLocalStorage('token');
+  const token = getFromLocalStorage("token");
 
   const [selectedFile, setSelectedFile] = useState(null);
 
@@ -23,42 +23,24 @@ const LifeInsurance = () => {
   const handleFileUpload = () => {
     if (selectedFile) {
       const formData = new FormData();
-      formData.append('file', selectedFile);
-      formData.append('numberOfSheet', 1);
+      formData.append("file", selectedFile);
+      formData.append("numberOfSheet", 1);
+
+      // Call your Java endpoint here using fetch or axios
+      // Example using fetch:
       dispatch(uploadExcelFile(formData));
+      
     }
   };
 
+ 
+
   return (
     <div>
-     
-
-    <Menu mode="horizontal" theme="dark" className="menu">
-     
-      <Menu.Item key="LifeInsurance">
-        <Link to="/LifeInsurance">بارگذاری بیمه عمر</Link>
-      </Menu.Item>
-      <Menu.Item key="home">
-        <Link to="/Login">خانه</Link>
-      </Menu.Item>
-    </Menu>
-
-    
-         <Divider orientation="right"> بارگذاری فایل  بیمه عمر  آجا</Divider>
-    <Row justify="end" className="upload-btn menu">
-    <Col span={4}> <Button type="primary" onClick={handleFileUpload}>
-          بارگذاری
-        </Button></Col>
-      <Col span={4}><Upload>
-          <Button icon={<UploadOutlined />} onChange={handleFileSelect}>
-            انتخاب فایل
-          </Button>
-        </Upload></Col>
-     
-        <Col span={4} > <label>بارگذاری فایل اکسل</label></Col>
-      <Col span={4}></Col>
-    </Row>
-  </div>
+      <p>Upload Excel File</p>
+      <input type="file" onChange={handleFileSelect} />
+      <button onClick={handleFileUpload}>Upload</button>
+    </div>
   );
 };
 
